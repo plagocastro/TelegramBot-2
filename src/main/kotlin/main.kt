@@ -18,5 +18,6 @@ fun main() {
                 bot.sendMessage(chatId = ChatId.fromId(message.chat.id), text = text)
             }
         }
+
     }
 }
