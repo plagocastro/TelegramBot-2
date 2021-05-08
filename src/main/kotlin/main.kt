@@ -17,7 +17,24 @@ fun main() {
                 println(message.chat.id)
                 bot.sendMessage(chatId = ChatId.fromId(message.chat.id), text = text)
             }
-        }
 
+            command("Detenerse") {
+
+                val result = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Parate porfa")
+
+                result.fold(
+                        {
+                            println("Vale tranqui paro")
+                        },
+                        {
+                            println("No fodase")
+                        }
+                )
+
+            }
+            command("Expulsar") {
+                bot.kickChatMember(chatId = ChatId.fromId(update.message!!.chat.id), userId = ChatId.fromChannelUsername(username = ),untilDate =)
+            }
+        }
     }
 }
