@@ -64,15 +64,15 @@ fun main() {
                         chatId = ChatId.fromId(message.chat.id),
                         type = PollType.QUIZ,
                         question = "¿Mi comida favorita?",
-                        options = listOf("Shushi", "Helado Bens&Jerrys chocolate, platano y crema de cacahuete", "McDonals"),
+                        options = listOf("Japones","Hamburguesa", "Helado Bens&Jerrys chocolate, platano y crema de cacahuete", "McDonals"),
                         correctOptionId = 2,
                         isAnonymous = true
                 )
                 bot.sendPoll(
                     chatId = ChatId.fromId(message.chat.id),
                     type = PollType.QUIZ,
-                    question = "¿?",
-                    options = listOf("Shushi", "Helado Bens&Jerrys chocolate, platano y crema de cacahuete", "McDonals"),
+                    question = "¿Cual es mi plan favorito?",
+                    options = listOf("Mirar el cielo nocturno", "Quedarme en casa leyendo","Salir de fiesta a romperla JODAAAAAAA"),
                     correctOptionId = 2,
                     isAnonymous = true
                 )
@@ -91,6 +91,9 @@ fun main() {
                 val juego = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "METELA COMO MYKE!!!")
                 bot.sendDice(chatId = ChatId.fromId(update.message!!.chat.id), emoji = DiceEmoji.Basketball)
 
+            }
+            command("Hablame"){
+                val audio = bot.sendAudio(chatId = ChatId.fromId(update.message!!.chat.id),audio = "https://youtu.be/fR9SQ6W3OEs")
             }
         }
     }
