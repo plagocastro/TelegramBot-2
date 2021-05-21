@@ -17,7 +17,7 @@ fun main() {
 
             command("Ayuda") {
                 val help = """
-                    */saludo* | El Bicho te saluda!
+                    */saludo* | 
                     */guapa* | Cuidado que se sonroja!
                     """.trimIndent()
                 bot.sendMessage(
@@ -93,7 +93,18 @@ fun main() {
 
             }
             command("Hablame"){
-                val audio = bot.sendAudio(chatId = ChatId.fromId(update.message!!.chat.id),audio = "https://youtu.be/fR9SQ6W3OEs")
+                val audio = bot.sendVideo(chatId = ChatId.fromId(update.message!!.chat.id), fileId =  "https://youtu.be/fR9SQ6W3OEs")
+            }
+            command("EstasEnfada?"){
+                val EstasEnfada1 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Tu sabras \uD83D\uDE20")
+                val EstasEnfada2 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Has sido malo ")
+                val EstasEnfada3 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "y aún así te quiero")
+            }
+
+            command("Casemonos"){
+                val Casemonos1 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Bebeeeeeeeeeee!!!!")
+                val Casemonos2 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "\uD83E\uDD7A")
+                val Casemonos3 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Si")
             }
         }
     }
