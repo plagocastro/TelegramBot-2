@@ -112,6 +112,11 @@ fun main() {
                 val Casemonos2 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "\uD83E\uDD7A")
                 val Casemonos3 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Si")
             }
+            command("Nudes"){
+                val Casemonos1 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Sempai eres un cochino!!!!")
+                val fotosueño = bot.sendAnimation(chatId = ChatId.fromId(update.message!!.chat.id), fileId = "https://preview.redd.it/1np9eznmnq861.jpg?auto=webp&s=75ba5aa504fcb73ece186a3d4117fa31f221c114" )
+                val Casemonos3 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "\uD83E\uDD75")
+            }
         }
     }
     bot.startPolling()
