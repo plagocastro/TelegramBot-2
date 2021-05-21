@@ -21,9 +21,11 @@ fun main() {
                     */guapa* | Cuidado que se sonroja!
                     */QuieroDormir* | Te da las buenas noches
                     */TestDelBuenNovio* | Encuesta en la que tienes que poner todas las respuestas correctas
-                    */Estas Enfandada* | Juega y gana con tu novia
-                    */Estas Enfandada* | Si se lo dices parece que se enfada
+                    */Juguemos* | Juega y gana con tu novia
+                    */EstasEnfandada* | Si se lo dices parece que se enfada
                     */Casemonos* | Se ilusiona simplemente con que se lo digas
+                    */Nudes* | Sube la temperatura del chat
+                    
                     """.trimIndent()
                 bot.sendMessage(
                         chatId = ChatId.fromId(message.chat.id),
@@ -95,10 +97,9 @@ fun main() {
 
                 val juego = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "METELA COMO MYKE!!!")
                 bot.sendDice(chatId = ChatId.fromId(update.message!!.chat.id), emoji = DiceEmoji.Basketball)
-
             }
 
-            command("EstasEnfada?"){
+            command("EstasEnfada"){
                 val EstasEnfada1 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Tu sabras \uD83D\uDE20")
                 val EstasEnfada2 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Has sido malo ")
                 val EstasEnfada3 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "y aún así te quiero")
@@ -108,6 +109,12 @@ fun main() {
                 val Casemonos1 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Bebeeeeeeeeeee!!!!")
                 val Casemonos2 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "\uD83E\uDD7A")
                 val Casemonos3 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Si")
+            }
+
+            command("Nudes"){
+                val Casemonos1 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Sempai eres un cochino!!!!")
+                val fotosueño = bot.sendAnimation(chatId = ChatId.fromId(update.message!!.chat.id), fileId = "https://preview.redd.it/1np9eznmnq861.jpg?auto=webp&s=75ba5aa504fcb73ece186a3d4117fa31f221c114" )
+                val Casemonos3 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "\uD83E\uDD75")
             }
         }
     }
