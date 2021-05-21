@@ -17,8 +17,14 @@ fun main() {
 
             command("Ayuda") {
                 val help = """
-                    */saludo* | 
+                    */saludo* | Te saluda como si hiciera años que no te ve!
                     */guapa* | Cuidado que se sonroja!
+                    */QuieroDormir* | Te da las buenas noches
+                    */TestDelBuenNovio* | Encuesta en la que tienes que poner todas las respuestas correctas
+                    */Juguemos* | Juega y gana con tu novia
+                    */EstasEnfandada* | Si se lo dices parece que se enfada
+                    */Casemonos* | Se ilusiona simplemente con que se lo digas
+                    */Nudes* | Sube la temperatura del chat
                     """.trimIndent()
                 bot.sendMessage(
                         chatId = ChatId.fromId(message.chat.id),
