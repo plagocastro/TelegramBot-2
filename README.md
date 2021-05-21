@@ -12,3 +12,9 @@ En el buid.gradle ponemos la libreria de telegram para poder acceder a los difer
 
 Actualizo el main con los importes necesarios de la libreria añado el token y añado metodos diversos 
 [ENSEÑO EL SRC](/src/main/kotlin/)
+
+-->**4**
+
+Hacemos los commits corespondientes y mediante el pull request unimos las ramas
+
+
