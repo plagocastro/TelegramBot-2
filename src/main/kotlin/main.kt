@@ -25,7 +25,6 @@ fun main() {
                     */EstasEnfandada* | Si se lo dices parece que se enfada
                     */Casemonos* | Se ilusiona simplemente con que se lo digas
                     */Nudes* | Sube la temperatura del chat
-                    
                     """.trimIndent()
                 bot.sendMessage(
                         chatId = ChatId.fromId(message.chat.id),
@@ -48,7 +47,7 @@ fun main() {
             }
             command("QuieroDormir") {
 
-                val sueño = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Buenas nocheees amor <3")
+                val sueño = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Buenas nocheees <3")
                 val fotosueño = bot.sendAnimation(chatId = ChatId.fromId(update.message!!.chat.id), fileId = "http://totally-relatable.tumblr.com/page/20" )
 
             }
@@ -71,15 +70,15 @@ fun main() {
                         chatId = ChatId.fromId(message.chat.id),
                         type = PollType.QUIZ,
                         question = "¿Mi comida favorita?",
-                        options = listOf("Shushi", "Helado Bens&Jerrys chocolate, platano y crema de cacahuete", "McDonals"),
+                        options = listOf("Japones","Hamburguesa", "Helado Bens&Jerrys chocolate, platano y crema de cacahuete", "McDonals"),
                         correctOptionId = 2,
                         isAnonymous = true
                 )
                 bot.sendPoll(
                         chatId = ChatId.fromId(message.chat.id),
                         type = PollType.QUIZ,
-                        question = "¿?",
-                        options = listOf("Shushi", "Helado Bens&Jerrys chocolate, platano y crema de cacahuete", "McDonals"),
+                        question = "¿Cual es mi plan favorito?",
+                        options = listOf("Mirar el cielo nocturno", "Quedarme en casa leyendo","Salir de fiesta a romperla JODAAAAAAA"),
                         correctOptionId = 2,
                         isAnonymous = true
                 )
@@ -97,9 +96,12 @@ fun main() {
 
                 val juego = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "METELA COMO MYKE!!!")
                 bot.sendDice(chatId = ChatId.fromId(update.message!!.chat.id), emoji = DiceEmoji.Basketball)
-            }
 
-            command("EstasEnfada"){
+            }
+            command("Hablame"){
+                val audio = bot.sendVideo(chatId = ChatId.fromId(update.message!!.chat.id), fileId =  "https://youtu.be/fR9SQ6W3OEs")
+            }
+            command("EstasEnfada?"){
                 val EstasEnfada1 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Tu sabras \uD83D\uDE20")
                 val EstasEnfada2 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Has sido malo ")
                 val EstasEnfada3 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "y aún así te quiero")
@@ -110,7 +112,6 @@ fun main() {
                 val Casemonos2 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "\uD83E\uDD7A")
                 val Casemonos3 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Si")
             }
-
             command("Nudes"){
                 val Casemonos1 = bot.sendMessage(chatId = ChatId.fromId(update.message!!.chat.id), text = "Sempai eres un cochino!!!!")
                 val fotosueño = bot.sendAnimation(chatId = ChatId.fromId(update.message!!.chat.id), fileId = "https://preview.redd.it/1np9eznmnq861.jpg?auto=webp&s=75ba5aa504fcb73ece186a3d4117fa31f221c114" )
