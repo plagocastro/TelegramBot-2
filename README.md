@@ -1,6 +1,7 @@
 # TelegramBot-2 
 
-##Configuración
+## Configuración
+
 -->**1**: Creamos un **objeto** al cual llamaremos apikey y pondremos el valor del token de nuestro bot 🥰
 ```
 object Apikey{
